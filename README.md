@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 
-<h3><b>Blog App</b></h3>
+<h1><b>Blog App</b></h1>
 
 <!-- TABLE OF CONTENTS -->
 
@@ -75,6 +75,10 @@
 > - Download and Install [Ruby](https://www.ruby-lang.org/en/downloads/) for your OS.
 > - Download and Install [PostgreSQL](https://www.postgresql.org/download/)
 > - VS Code
+> - Ruby on Rails
+```sh
+  gem install rails
+```
 
 ### Setup
 
@@ -128,7 +132,7 @@
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> - **Archieve the post**
+> - **Archive the post**
 > - **User Authentication**
 > - **Other reaction options besides likes such as love and celebrate**
 
