@@ -24,4 +24,11 @@ RSpec.describe User, type: :model do
     subject.post_counter = 0
     expect(subject).to be_valid
   end
+
+  it 'Most recent posts should return 3 posts' do
+    4.times do |i|
+      subject.posts.create(title: "Post #{i + 1}")
+    end
+    expect(subject.most_recent_posts.length).to eq(3)
+  end
 end
