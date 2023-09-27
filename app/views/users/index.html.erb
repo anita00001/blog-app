@@ -1,1 +1,8 @@
-<h1>Welcome to my Blog!</h1>
+<% @users.each do |user| %>
+  # UserImage
+  <img src = "<%= user.photo %>" alt = "user image">
+  # User
+  <%= link_to user.name, user_path(user) %>
+  # Number of posts
+  <%= user.posts.count %>
+<% end %>

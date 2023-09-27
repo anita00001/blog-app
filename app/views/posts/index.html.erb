@@ -1,1 +1,35 @@
-<h1>Welcome to the Post page!</h1>
+<img src="<%= @user.photo %>" alt="user image">
+# Username
+<%= link_to @user.name, users_path %>
+
+# Number of posts
+<%= @user.posts.count %>
+
+<% @posts.each_with_index do |post, index| %>
+  <%= 'hidden' if index >= 3 %>
+  
+  # Number of Post
+  <% index + 1 %>
+
+  # Username
+  <%= @user.name %>
+  
+  # PostLink
+  <%= link_to post.text, user_post_path(@user, post) %>
+
+  #CommentsCount
+  <%= post.comments.count %>
+
+  # LikesCount
+  <%= post.likes.count %>
+
+  # RecentComments
+  <% post.most_recent_comments.each do |comment| %>
+    # User
+    <%= comment.user.name %>
+    # Comment
+    <%= comment.text %>
+  <% end %>
+<% end %>
+
+<%= link_to "Pagination", user_posts_path(@user) %>

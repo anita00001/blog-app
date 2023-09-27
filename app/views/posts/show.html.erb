@@ -1,1 +1,20 @@
-<h2>Here is a list of posts for a given user.</h2>
+# Post
+<%= @index %>
+# User
+<%= link_to @user.name, "/users" %>
+
+# CommentCounnt
+<%= @post.comments.count %>
+
+# LikesCount
+<%= @post.likes.count %>
+
+# Post Text
+<%= @post.text %>
+
+<% @post.comments.each do |comment| %>
+  # User
+  <%= comment.user.name %>
+  # Comment
+  <%= comment.text %>
+<% end %>

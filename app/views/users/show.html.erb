@@ -1,1 +1,28 @@
-<h2>Here is a list of users!</h2>
+# UserImage
+<img src="<%= @user.photo %>" alt="user image">
+# UserLink
+<%= link_to @user.name, users_path %>
+# Number of posts
+<%= @user.posts.count %>
+
+# Bio
+<%= @user.bio %>
+
+<% @user.most_recent_posts.each_with_index do |post, index| %>
+  <%= 'hidden' if index >= 3 %>
+  # Post:
+  <%= index + 1 %>
+  <%# # Username
+  <%= @user.name %>
+
+  # PostText
+  <%= link_to post.text, user_post_path(@user, post) %>
+
+  # Comments
+  <%= post.comments.count %>
+
+  # Likes
+  <%= post.likes.count %>
+<% end %>
+
+<%= link_to "See All Posts", user_posts_path(@user) %>
