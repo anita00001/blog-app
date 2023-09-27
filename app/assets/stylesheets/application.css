@@ -52,18 +52,24 @@ body {
   padding-top: 1rem;
 }
 
+.post-comment {
+  display: flex;
+  flex-direction: column;
+}
+
 .post-wrapper {
   margin: 1rem;
 }
 
-.recent-posts {
+.recent-posts,
+.all-post {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   padding: 1rem;
   border: 2px solid #454444;
 }
 
-.recent-posts > .user-post {
+.user-post {
   padding-top: 1rem;
 }
 
@@ -72,8 +78,15 @@ body {
   justify-content: end;
 }
 
-.see-all-posts {
+.recent-comments {
+  margin-top: -0.45rem;
+  padding: 1rem;
+  border: 2px solid #454444;
+}
+
+.see-all-posts,
+.pagination {
   margin-left: 45%;
   width: fit-content;
-  padding: 1rem;
+  padding: 0.5rem;
 }
