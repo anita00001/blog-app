@@ -1,20 +1,22 @@
-# Post
-<%= @index %>
-# User
-<%= link_to @user.name, "/users" %>
+<div class="main">
+  <div class="post-details">
+    <h3>
+      Post #<%= @index %>
+      by <%= link_to @user.name, "/users" %>
+    </h3>
 
-# CommentCounnt
-<%= @post.comments.count %>
+    <div class="counter-wrapper">
+      <p>Comments: <%= @post.comments.count %>,&nbsp;</p>
+      <p>Likes: <%= @post.likes.count %></p>
+    </div>
 
-# LikesCount
-<%= @post.likes.count %>
+    <p><%= @post.text %></p>
+  </div>
 
-# Post Text
-<%= @post.text %>
-
-<% @post.comments.each do |comment| %>
-  # User
-  <%= comment.user.name %>
-  # Comment
-  <%= comment.text %>
-<% end %>
+  <div class = "all-comments">
+    <% @post.comments.each do |comment| %>
+      <p><%= comment.user.name %>:
+      <%= comment.text %></p>
+    <% end %>
+  </div>
+</div>
