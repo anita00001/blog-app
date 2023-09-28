@@ -1,1 +1,11 @@
-<h1>Welcome to my Blog!</h1>
+<div class="main">
+  <% @users.each do |user| %>
+    <div class = "user-wrapper">
+      <img src = "<%= user.photo %>" alt = "user image" class = "user-image">
+      <div class = "user-info">
+        <h1 class="user-name"><%= link_to user.name, user_path(user) %></h1>
+        <p class = "post-count"> Number of posts: <%= user.posts.count %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
