@@ -12,6 +12,14 @@
 
     <p><%= @post.text %></p>
   </div>
+  
+  <div class="add-like">
+    <%= render partial: 'likes/like', locals: {post: @post} %>
+  </div>
+
+  <div class="add-comment">
+    <%= link_to "Add a New Comment...", new_post_comment_path(@post) %>
+  </div>
 
   <div class = "all-comments">
     <% @post.comments.each do |comment| %>

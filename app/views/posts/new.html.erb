@@ -1,0 +1,9 @@
+<div class = "form-wrapper">
+  <form action="<%= posts_path(@post) %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <input type="text" name="post[title]" placeholder="Enter Post Title">
+  <textarea name="post[text]" placeholder="Your Post Text Here" rows="10"></textarea>
+  <input type="submit" value="Submit">
+  </form>
+</div>
+

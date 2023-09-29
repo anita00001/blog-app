@@ -11,7 +11,8 @@ body {
   justify-content: center;
 }
 
-.main {
+.main,
+.form-wrapper {
   margin-top: 2rem;
   margin-bottom: 2rem;
   width: 90%;
@@ -40,6 +41,15 @@ body {
 
 .user-info > .post-count {
   text-align: end;
+}
+
+.add-post,
+.add-comment {
+  margin: 1rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  border: 1px solid #454444;
 }
 
 .bio-wrapper {
@@ -85,7 +95,6 @@ body {
 }
 
 .recent-comments {
-  margin-top: -0.45rem;
   padding: 1rem;
   border: 2px solid #454444;
 }
@@ -102,4 +111,39 @@ body {
   margin-left: 45%;
   width: fit-content;
   padding: 0.5rem;
+}
+
+.form-wrapper {
+  border: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  border: none;
+}
+
+form > input,
+form > textarea {
+  width: 60%;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+form > input[type="submit"],
+form > input[value="submit"] {
+  width: fit-content;
+}
+
+form > input[value="Like"] {
+  padding: 0.3rem;
+  margin-left: 1rem;
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
+  border-radius: 1rem;
+  justify-self: flex-start;
+  align-self: flex-start;
 }

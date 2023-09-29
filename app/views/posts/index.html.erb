@@ -7,6 +7,10 @@
     </div>
   </div>
 
+  <div class="add-post">
+    <%= link_to "Create a New Post...", new_user_post_path %>
+  </div>
+
   <div class = "post-comment">
     <% @posts.each_with_index do |post, index| %>
       <div class = "post-wrapper">
