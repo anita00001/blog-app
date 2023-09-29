@@ -9,7 +9,12 @@ class CommentsController < ApplicationController
     @comment = @post.comments.new(comment_params)
     @comment.user = current_user
 
-    redirect_to @post if @comment.save
+    if @comment.save
+      @user = current_user
+      redirect_to user_post_path(@user, @post)
+    else
+      render :new
+    end
   end
 
   def comment_params
