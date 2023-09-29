@@ -94,12 +94,6 @@ body {
   justify-content: end;
 }
 
-/* .add-comment {
-  margin: 1rem;
-  padding: 1rem;
-  border: 1px solid red;
-} */
-
 .recent-comments {
   padding: 1rem;
   border: 2px solid #454444;
@@ -142,4 +136,14 @@ form > textarea {
 form > input[type="submit"],
 form > input[value="submit"] {
   width: fit-content;
+}
+
+form > input[value="Like"] {
+  padding: 0.3rem;
+  margin-left: 1rem;
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
+  border-radius: 1rem;
+  justify-self: flex-start;
+  align-self: flex-start;
 }
