@@ -1,5 +1,6 @@
-<form>
-  <textarea placeholder="Enter post Title"></textarea>
-  <textarea placeholder="Your Post Text Here"></textarea>
-  <button>Submit</button>
+<form action="<%= posts_path(@post) %>" method="post">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <textarea name="post[title]" placeholder="Enter Post Title"></textarea>
+  <textarea name="post[text]" placeholder="Your Post Text Here"></textarea>
+  <input type="submit" value="Submit">
 </form>
