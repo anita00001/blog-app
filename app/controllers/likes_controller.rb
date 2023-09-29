@@ -4,9 +4,9 @@ class LikesController < ApplicationController
   def create
     @like = Like.create(user: current_user, post: @post)
 
-    if @like.save
-      redirect_to @post
-    end
+    return unless @like.save
+
+    redirect_to @post
   end
 
   def set_post
