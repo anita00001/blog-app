@@ -104,20 +104,40 @@
 ### Usage
 
 > To run the project, execute the following command:
+> - Drop the previously existing database of same name
+```sh
+  rails db:drop
+```
+> - Create database and Migrate
+```sh
+  rails db:create db:migrate
+```
+> - Feed Sample data through seeds
+```sh
+  rails db:seed
+```
+> - Run the server
 ```sh
   rails server
 ```
 
 ### Run tests
 
-> To run linters check, run the following command:
+> - To run Rubocop checker, run the following command:
 
 ```sh
   gem install rubocop
 ```
-
 ```sh
   rubocop
+```
+
+> - To run Stylelint checker, run the following command:
+```sh
+  npm install
+```
+```sh
+  npx stylelint "**/*.{css,scss}"
 ```
 
 ## 👥 Authors <a name="authors"></a>
