@@ -43,7 +43,8 @@ body {
   text-align: end;
 }
 
-.add-post {
+.add-post,
+.add-comment {
   margin: 1rem;
   padding: 1rem;
   text-align: center;
@@ -93,8 +94,13 @@ body {
   justify-content: end;
 }
 
+/* .add-comment {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid red;
+} */
+
 .recent-comments {
-  margin-top: -0.45rem;
   padding: 1rem;
   border: 2px solid #454444;
 }

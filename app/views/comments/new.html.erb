@@ -1,5 +1,7 @@
-<form action="<%= post_comments_path(@post) %>" method="post">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <textarea name="comment[text]" placeholder="Write your comment here"></textarea>
-  <input type="submit" value="Submit">
-</form>
+<div class="form-wrapper">
+  <form action="<%= post_comments_path(@post) %>" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <textarea name="comment[text]" placeholder="Write your comment here" rows="10"></textarea>
+    <input type="submit" value="Submit">
+  </form>
+</div>
