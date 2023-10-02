@@ -9,9 +9,9 @@ require "faker"
   )
 end
 
-50.times do
+40.times do
   Post.create(
-    author_id: rand(7..16),
+    author_id: rand(1..11),
     title: Faker::Lorem.sentence,
     text: Faker::Lorem.paragraphs(number: 3).join("\n\n"),
     likes_counter: rand(0..50),
@@ -19,9 +19,9 @@ end
   )
 end
 
-100.times do
+250.times do
   Comment.create(
-    user_id: rand(7..16),
+    user_id: rand(1..11),
     post_id: rand(1..50),
     text: Faker::Lorem.paragraphs(number: 1).join("\n\n")
   )
