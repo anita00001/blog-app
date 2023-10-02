@@ -16,7 +16,11 @@
       <div class = "post-wrapper">
         <div class="all-post">
           <h3>Post #<%= index + 1 %></h3>
-          <p class="user-post"><%= link_to post.text, user_post_path(@user, post) %></p>
+          <section class="user-post">
+            <h3><%= link_to post.title, user_post_path(@user, post) %></h3>
+            <br>
+            <p><%= post.text %></p>
+          </section>
 
           <div class="counter-wrapper">
             <p>Comments: <%= post.comments.count %>,&nbsp;</p>
