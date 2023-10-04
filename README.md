@@ -148,6 +148,12 @@
 > - LinkedIn: [anitaa-sharmaa](https://www.linkedin.com/in/anitaa-sharmaa/)
 > - Twitter: [@anitaa_sharmaa](https://twitter.com/anitaa_sharmaa)
 
+👤 **MesakDuduCoder**
+
+> - GitHub: [@githubhandle](https://github.com/MesakDuduCoder)
+> - Twitter: [@twitterhandle](https://twitter.com/mesak_10)
+> - LinkedIn: [LinkedIn](https://www.linkedin.com/in/mesak-lalrindika/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
