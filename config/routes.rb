@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   post '/posts', to: 'posts#create', as: 'posts'
 
   resources :users, only: [:index, :show] do
@@ -9,4 +10,6 @@ Rails.application.routes.draw do
     resources :comments, only: [:new, :create]
     resource :likes, only: [:create]
   end
+
+  root to: "users#index"
 end
