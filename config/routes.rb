@@ -7,9 +7,11 @@ Rails.application.routes.draw do
   end
 
   resources :posts do
-    resources :comments, only: [:new, :create]
+    resources :comments, only: [:new, :create, :destroy]
     resource :likes, only: [:create]
   end
 
   root to: "users#index"
+
+  delete '/posts/:id', to: 'posts#destroy', as: 'destroy_post'
 end
