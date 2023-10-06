@@ -1,5 +1,6 @@
 <div class="main">
-  <%= button_to 'Log out', destroy_user_session_path, method: :delete %>
+  <%= button_to 'Log out', destroy_user_session_path, method: :delete, class: "logout" %>
+  <span>Logged In with <%= current_user.name %></span>
   <% @users.each do |user| %>
     <div class = "user-wrapper">
       <img src = "<%= user.photo %>" alt = "user image" class = "user-image">

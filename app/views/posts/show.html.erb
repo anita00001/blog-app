@@ -27,8 +27,13 @@
 
   <div class = "all-comments">
     <% @post.comments.each do |comment| %>
-      <p><%= comment.user.name %>:
-      <%= comment.text %></p>
+      <div class="delete">
+        <p><%= comment.user.name %>:
+        <%= comment.text %></p>
+        <% if can? :destroy, comment %>
+          <%= button_to 'Delete Comment', post_comment_path(@post, comment), method: :delete %>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>
