@@ -40,4 +40,5 @@ group :test do
   gem 'selenium-webdriver'
 end
 
+gem 'cancancan', '~> 1.9'
 gem 'devise', '~> 4.9'
